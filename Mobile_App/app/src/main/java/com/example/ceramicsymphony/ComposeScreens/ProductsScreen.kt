@@ -558,14 +558,12 @@ fun Base64Image(
 
         if (!base64String.isNullOrEmpty()) {
             try {
-                // Очищаем Base64 от префикса data: если он есть
                 val cleanBase64 = if (base64String.startsWith("data:") && base64String.contains(",")) {
                     base64String.substring(base64String.indexOf(",") + 1)
                 } else {
                     base64String
                 }
 
-                // Проверяем валидность Base64 и декодируем
                 val decodedBytes = Base64.decode(cleanBase64, Base64.DEFAULT)
 
                 if (decodedBytes.isNotEmpty()) {

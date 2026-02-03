@@ -8,7 +8,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
-    //192.168.31.40
+    //для телефона поменяешь на свою сеть вместо 10.0.2.2
     private const val serverURL = "http://10.0.2.2:11111/"
     private val loggingInterceptor = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
